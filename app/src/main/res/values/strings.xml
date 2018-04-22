@@ -1,0 +1,13 @@
+<resources>
+    <!-- set the placeholder string values here -->
+    <string name="app_name">mycalculator</string>
+    <string name="num_one">1</string>
+    <string name="num_two">2</string>
+    <!-- create string names for the four arithmetic operations -->
+
+    <string name="add">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="calculate">calculate!</string>
+</resources>
