@@ -1,48 +1,27 @@
 package com.shahir.mycalculator
 
-import android.support.v7.app.AppCompatActivity
+// Using R.layout.activity_main from the 'main' source set
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import android.support.v7.app.AppCompatActivity
+
+
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
-}
+
 
 //create a function to perform the specified arithmetic calculation
-
-sealed class Operation(val x: Long) {
-    abstract fun calculate(y: Long): Long
-
-    //addition
-    class add(x: Long): Operation(x) {
-        override fun calculate(y: Long): Long {
+//
+        fun addTwoNumbers(x:Int, y:Int):Int{
+            val sum = x + y
+            println("The sum is $sum")
             return x + y
-        }
+        } //end function
+        addTwoNumbers(3,4)
     }
 
-    //subtraction
-    class subtract(x: Long): Operation(x) {
-        override fun calculate(y: Long): Long {
-            return x - y
-        }
-    }
-
-    //multiplication
-    class multiply(x: Long): Operation(x) {
-        override fun calculate(y: Long): Long {
-            return x * y
-        }
-    }
-
-
-    //division
-    class divide(x: Long): Operation(x) {
-        override fun calculate(y: Long): Long {
-            return x / y
-        }
-    }
-}  //end operation
+    //add.setOnClickListener{(println("Done")}
+} //end MainActivity
